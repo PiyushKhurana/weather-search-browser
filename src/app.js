@@ -23,6 +23,9 @@ app.get('',(req,res)=>{
     })
 })
 
+app.get('*',(req,res)=>{
+    res.send("<h1>Dont mess with url !!!</h1> <h2>Error 404  Page Not Found</h2>")
+})
 
 app.listen(port,()=>{
     console.log(`Server is up and running at port ${port}`);
